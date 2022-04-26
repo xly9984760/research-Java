@@ -25,7 +25,6 @@ public class UnSafeTest {
 
     public static Unsafe reflectGetUnsafe() {
         try {
-
             Field field = Unsafe.class.getDeclaredField("theUnsafe");
             field.setAccessible(true);
             return (Unsafe) field.get(null);

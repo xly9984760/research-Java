@@ -1,5 +1,6 @@
 package cn.xlystar;
 
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 import java.util.concurrent.atomic.AtomicMarkableReference;
 import java.util.concurrent.atomic.AtomicStampedReference;
@@ -28,6 +29,7 @@ public class AtomicIntegerTest {
         AtomicIntegerFieldUpdater<AtomicIntegerTest> fieldIntegerU = AtomicIntegerFieldUpdater.newUpdater(AtomicIntegerTest.class, "i");
         AtomicIntegerTest atomicIntegerTest = new AtomicIntegerTest();
         System.out.println(fieldIntegerU.compareAndSet(atomicIntegerTest,2,3));
+
     }
 }
 

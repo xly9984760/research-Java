@@ -9,8 +9,11 @@ package cn.xlystar;
  */
 public class ThreadLocalTest {
     public static void main(String[] args) {
-        Thread thread = new Thread(() -> {
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
 
+            }
         });
         ThreadLocal<String> local = new ThreadLocal<>();
         local.set("local");
